@@ -10,7 +10,14 @@ def clasificar_nota(nota):
       - 9  <= nota <= 10       →  devolver "Sobresaliente"
 
     """
-    # Tu código aquí ↓
+    if nota < 0 or nota > 10:
+        raise ValueError(f"La nota {nota} está fuera del rango permitido (0-10).")
 
-    pass  # ← elimina esta línea cuando termines
-
+    if nota < 5:
+        return "Suspenso"
+    elif nota < 7:
+        return "Aprobado"
+    elif nota < 9:
+        return "Notable"
+    else:
+        return "Sobresaliente"
